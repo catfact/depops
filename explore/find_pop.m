@@ -27,7 +27,6 @@ Xlp = log(abs(X) .^ 2);
 [Xsrc, Xflt] = source_filter(Xlp, 0.4);
 
 %% other spectral measures
-
 Xflat = flatness(Xp);
 
 %% flatness will be more useful if we filter out the quietest frames
