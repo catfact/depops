@@ -10,8 +10,8 @@
 
 function [locations, peaks, signal] = find_pops(filename, channel=1,
 			       nwin=512, nbins=256, nhop=128,
-			       meanMagThreshDb = -60,
-			       maxMagThreshDb = -30,
+			       meanMagThreshDb = -54,
+			       maxMagThreshDb = -24,
 			       peakFlatnessThreshDb = -80)
 
 #file = "../e5_r.wav";				
