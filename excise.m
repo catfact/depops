@@ -1,7 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% THIS IS TOTALLY WOOFED %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %% excise a portion of given (audio) signal with crossfade
 %%
 %% it is assumed that the exact final duration is flexible,
@@ -51,6 +47,6 @@ function [Y, lag, C, nf, W, V] = excise(X, a, b, nw=1000)
   %% should choose interpolation type based on degree of correlation
   %% (linear if totally correlated, equal-power if uncorrelated)
   %% for now, just use linear
-  Yf = (W.*phi) + (V.*(1-phi));
+  Yf = (V.*phi) + (W.*(1-phi));
   Y = [Y0;Yf;Y1];  
 end
